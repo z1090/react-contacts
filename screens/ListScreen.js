@@ -40,7 +40,6 @@ class ListScreen extends React.Component {
 
     getData() {
         axios.get("https://robocontacts.herokuapp.com/api/contacts?random").then(({ data }) => {
-            console.log(data);
             this.setState({ contacts: data, loading: false });
         });
     }
